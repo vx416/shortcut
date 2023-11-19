@@ -14,11 +14,16 @@ function gm2() {
     git pull origin "$target_branch" --rebase
     git merge "$current_branch"
     echo "merge $current_branch to $target_branch"
-    
+
 }
 
 # gpush git pull --rebase then push
 function gpullpush() {
     current_branch=$(git rev-parse --abbrev-ref HEAD)
     git pull origin "$current_branch" --rebase && git push
+}
+
+
+function grem() {
+    git branch --merged $1 | egrep -v "(^\*|$1)" | xargs git branch -d
 }
