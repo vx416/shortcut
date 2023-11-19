@@ -29,3 +29,10 @@ function gcommitpush() {
 function grem() {
     git branch --merged $1 | egrep -v "(^\*|$1)" | xargs git branch -d
 }
+
+
+# grem remove branch which has been merged to xx branch
+function gremremote() {
+    git fetch --all
+    git branch --merged $1 | egrep -v "(^\*|$1)" | xargs git push --delete origin -d
+}
