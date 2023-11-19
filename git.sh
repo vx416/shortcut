@@ -1,4 +1,6 @@
 alias glog='git log --oneline | head -n $1'
 alias gb='git branch'
+alias gcb='git checkout -b $1'
+alias gc='git checkout $1'
 alias gp='git push origin head'
 alias gpr='git pull origin --rebase'
