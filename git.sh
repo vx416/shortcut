@@ -14,6 +14,7 @@ function gm2() {
     git pull origin "$target_branch" --rebase
     git merge "$current_branch"
     echo "merge $current_branch to $target_branch"
+    
 }
 
 # gpush git pull --rebase then push
