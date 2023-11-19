@@ -1,0 +1,1 @@
+alias glog='git log --oneline | head -n $1'
